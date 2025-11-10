@@ -23,8 +23,8 @@ function UserCard({ data, index }: UserCardProps) {
       sx={{
         display: "flex",
         alignItems: "center",
-        p: { xs: 1.5, sm: 2 },
-        gap: { xs: 1.5, sm: 2 },
+        p: { xs: 1.5, sm: 1.5 },
+        gap: { xs: 1, sm: 1.5 },
         position: { xs: 'relative', md: 'absolute' },
         width: { xs: '100%', sm: '90%', md: 424 },
         maxWidth: { xs: '400px', md: 'none' },
@@ -64,6 +64,7 @@ function UserCard({ data, index }: UserCardProps) {
             fontWeight: 700,
             fontSize: { xs: 14, sm: 16 },
             color: "white",
+            fontFamily:'poppins',
             lineHeight: { xs: '24px', sm: '32px' },
             whiteSpace: 'nowrap',
             overflow: 'hidden',
@@ -77,6 +78,7 @@ function UserCard({ data, index }: UserCardProps) {
             fontSize: { xs: 11, sm: 12 }, 
             color: "#ccc",
             whiteSpace: 'nowrap',
+            fontFamily:'poppins',
             overflow: 'hidden',
             textOverflow: 'ellipsis',
           }}
@@ -127,7 +129,7 @@ export default function Collections() {
   return (
     <Box 
       marginTop={{ xs: 4, sm: 5, md: 6 }}
-      px={{ xs: 2, sm: 3, md: 4 }}
+      
     >
       <Box
         sx={{
@@ -137,22 +139,22 @@ export default function Collections() {
           minHeight: { xs: 'auto', md: '344px' },
           display: "flex",
           flexDirection: { xs: 'column', md: 'row' },
-          justifyContent: { md: "space-between" },
-          gap: { xs: 4, md: 0 },
-          mx: 'auto',
-          pl: { xs: 0, md: 4, lg: 9 }
+          // justifyContent: { md: "space-between" },
+          gap: { xs: 4, md: 10 },
+          pl: { xs: 4, md: 9 },
         }}
       >
         {/* Left Section */}
         <Box 
           sx={{ 
             width: { xs: '100%', md: '50%', lg: '656px' },
-            mb: { xs: 4, md: 0 }
+            mb: { xs: 4, md: 0 },
           }}
         >
           <Typography 
             sx={{ 
               color: "#5699FF", 
+              fontFamily:'poppins',
               fontWeight: 700, 
               fontSize: { xs: 14, sm: 16 }
             }}
@@ -165,6 +167,7 @@ export default function Collections() {
               fontSize: { xs: 28, sm: 36, md: 44, lg: 56 },
               lineHeight: { xs: '36px', sm: '48px', md: '60px', lg: '72px' },
               color: "white",
+              fontFamily:'poppins',
               mt: 1,
             }}
           >
@@ -174,6 +177,7 @@ export default function Collections() {
             sx={{ 
               color: "#ccc", 
               mt: 2, 
+              fontFamily:'poppins',
               lineHeight: { xs: '24px', sm: '28px' },
               fontSize: { xs: '0.9rem', sm: '1rem' },
               pr: { md: 2 }
@@ -202,51 +206,65 @@ export default function Collections() {
 
         {/* Right Section - User Cards */}
         <Box 
-          sx={{ 
-            position: "relative", 
-            width: { xs: '100%', md: '45%', lg: 504 },
-            height: { xs: 'auto', md: 296 },
-            display: 'flex',
-            flexDirection: { xs: 'column', md: 'block' },
-            alignItems: { xs: 'center', md: 'flex-start' },
-            paddingLeft: { xs: 0, md: 4, lg: 10 },
-            pt: { xs: 2, md: 0 }
-          }}
-        >
-          {userCards.map((user, index) => (
-            <UserCard key={index} data={user} index={index} />
-          ))}
-        </Box>
+  sx={{ 
+    position: "relative", 
+    width: { xs: '100%', md: '45%', lg: 504 },
+    height: { xs: 'auto', md: 296 },
+    display: 'flex',
+    flexDirection: { xs: 'column', md: 'block' },
+    alignItems: { xs: 'center', md: 'flex-start' },
+    paddingLeft: { xs: 0, md: 10, lg: 20 },
+    pt: { xs: 2, md: 2 },
+    pl:8
+  }}
+>
+  {userCards.map((user, index) => (
+    <Box
+      key={index}
+      sx={{
+        opacity: index === 0 ? 1 : 0.6,  // 👈 decrease opacity for 2nd & 3rd cards
+        transition: 'opacity 0.3s ease',
+        '&:hover': { opacity: 1 }        // 👈 optional: brighten on hover
+      }}
+    >
+      <UserCard data={user} index={index} />
+    </Box>
+  ))}
+</Box>
+
+
       </Box>
 
       {/* Discount Banner */}
-      <Box
+      <Box 
         sx={{
-          width: "100%",
+          width: "100%", 
           height: { xs: "auto", sm: "70px", md: "90px" },
-          marginTop: { xs: "30px", sm: "35px", md: "40px" },
-          display: "flex",
+          marginTop: { xs: '80px', sm: '120px', md: '150px' }, 
+          display: 'flex', 
           flexDirection: { xs: 'column', sm: 'row' },
-          justifyContent: { xs: 'center', sm: "space-between" },
-          alignItems: "center",
-          backgroundColor: "#AA00FF",
-          color: "white",
-          px: { xs: 2, sm: 3, md: 4 },
+          justifyContent: { xs: 'center', sm: 'space-between' },
+          alignItems: 'center', 
+          backgroundColor: '#AA00FF', 
+          color: 'white',
+          px: { xs: 2, sm: 3, md: 9 },
           py: { xs: 2, sm: 0 },
           gap: { xs: 1, sm: 2 },
+          overflow: 'hidden'
         }}
       >
         <Typography 
           variant="h4"
           sx={{
-            fontSize: { xs: '1.25rem', sm: '1.75rem', md: '2.125rem' },
+            fontSize: { xs: '1.25rem', sm: '1.75rem', md: '2.2rem' },
+            fontWeight: 'bold',
             display: { xs: 'none', sm: 'block' }
           }}
         >
           Discount Sale
         </Typography>
-        <Typography
-          variant="h4"
+        <Typography 
+          variant="h4" 
           sx={{
             color: "transparent",
             WebkitTextStroke: { xs: "0.5px white", md: "0.6px white" },
@@ -260,14 +278,15 @@ export default function Collections() {
         <Typography 
           variant="h4"
           sx={{
-            fontSize: { xs: '1.25rem', sm: '1.75rem', md: '2.125rem' },
+            fontSize: { xs: '1.25rem', sm: '1.75rem', md: '2.2rem' },
+            fontWeight:'bold',
             display: { xs: 'none', md: 'block' }
           }}
         >
           Discount Sale
         </Typography>
-        <Typography
-          variant="h4"
+        <Typography 
+          variant="h4" 
           sx={{
             color: "transparent",
             WebkitTextStroke: { xs: "0.5px white", md: "0.6px white" },

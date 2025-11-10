@@ -62,7 +62,7 @@ const MuiNavbar = () => {
         p: 2,
         borderBottom: '1px solid rgba(255,255,255,0.1)'
       }}>
-        <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+        <Typography variant="h6" sx={{fontFamily:'poppins', fontWeight: 'bold' }}>
           YORFY
         </Typography>
         <IconButton onClick={handleDrawerToggle} sx={{ color: 'white' }}>
@@ -163,6 +163,7 @@ const MuiNavbar = () => {
             variant={isMobile ? "body1" : "h6"} 
             component='div' 
             sx={{
+              fontFamily:'poppins',
               fontWeight: 'bold',
               fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' },
               display: { xs: 'block', sm: 'block' }

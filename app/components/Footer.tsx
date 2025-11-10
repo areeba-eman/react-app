@@ -29,6 +29,7 @@ const Footer = () => {
           <Typography 
             variant="h5" 
             sx={{ 
+              fontFamily:'poppins',
               fontWeight: 'bold',
               fontSize: { xs: '1.25rem', sm: '1.5rem' }
             }}
@@ -75,7 +76,7 @@ const Footer = () => {
       
       <Divider 
         sx={{
-          borderColor: 'white', 
+          borderColor: 'blue', 
           borderWidth: 1, 
           mx: { xs: 2, sm: 4, md: 6, lg: 9 },
           my: { xs: 2, sm: 3 }
@@ -97,6 +98,7 @@ const Footer = () => {
         <Typography 
           variant="body1"
           sx={{
+            fontFamily:'poppins',
             fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' }
           }}
         >
@@ -105,6 +107,7 @@ const Footer = () => {
         <Typography 
           variant="body1"
           sx={{
+            fontFamily:'poppins',
             fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' }
           }}
         >

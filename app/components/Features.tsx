@@ -15,16 +15,17 @@ const Features = () => {
       >
         <Typography 
           variant="body1" 
-          color="primary" 
-          sx={{ fontWeight: 'Bold' }}
+          color="primary"
+          sx={{fontFamily:'poppins', fontWeight: 'Bold' }}
         >
           Featured
         </Typography>
         <Typography 
           variant="h3" 
           sx={{ 
+            fontFamily:'poppins',
             fontWeight: 'Bold',
-            fontSize: { xs: '1.75rem', sm: '2.5rem', md: '3rem' }
+            fontSize: { xs: '1.75rem', sm: '2.5rem', md: '3.5rem' }
           }}
         >
           Hot Trending On This <br /> Week from Yorfy
@@ -33,10 +34,12 @@ const Features = () => {
           variant="body2"
           sx={{
             fontSize: { xs: '0.875rem', sm: '1rem' },
-            paddingX: { xs: 1, sm: 2 }
+            paddingX: { xs: 1, sm: 2 },
+            fontFamily:'poppins'
           }}
         >
-          Explore the most engaging articles, videos, and tutorials that are making waves this week. Stay updated with the latest trends and insights curated just for you.
+          Explore the most engaging articles, videos, and tutorials that are making 
+          waves this week. Stay updated <br /> with the latest trends and insights curated just for you.
         </Typography>
       </Stack>
 
@@ -77,16 +80,18 @@ const Features = () => {
               variant="h5" 
               sx={{ 
                 fontWeight: 'Bold',
-                fontSize: { xs: '1.25rem', sm: '1.5rem' }
+                fontFamily:'poppins',
+                fontSize: { xs: '1.25rem', sm: '1.5rem' , md:'2.8rem' }
               }}
             >
               YorEyes
             </Typography>
             <Typography 
               variant="h5" 
-              sx={{ 
+              sx={{
+                fontFamily:'poppins',
                 fontWeight: 'Bold',
-                fontSize: { xs: '1.25rem', sm: '1.5rem' }
+                fontSize: { xs: '1.25rem', sm: '1.5rem', md:'2.5rem' }
               }}
             >
               #234
@@ -94,6 +99,7 @@ const Features = () => {
             <Typography 
               variant="body1"
               sx={{
+                fontFamily:'poppins',
                 fontSize: { xs: '0.875rem', sm: '1rem' }
               }}
             >
@@ -135,20 +141,23 @@ const Features = () => {
             }}
           >
             <Typography 
-              variant="h3"
-              sx={{
-                fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' }
+              variant="h5"
+                sx={{ 
+                  fontFamily:'poppins',
+                fontWeight: 'Bold',
+                fontSize: { xs: '1.25rem', sm: '1.5rem' , md:'2.8rem' }
               }}
             >
-              Interesting with This Item?
+              Interesting <br /> with This <br /> Item?
             </Typography>
             <Typography 
-              variant="body1"
+              variant="body2"
+              fontFamily='poppins'
               sx={{
                 fontSize: { xs: '0.875rem', sm: '1rem' }
               }}
             >
-              Dive into the world of YorEyes and experience the fusion of art and technology. Don't miss out on owning something like this nfts from our overseass
+              Dive into the world of YorEyes and experience the fusion of art and technology. Don't miss out on owning something like this nfts
             </Typography>
             <Button 
               variant="contained"
@@ -157,7 +166,8 @@ const Features = () => {
                 paddingY: { xs: 1, sm: 1.5 },
                 fontSize: { xs: '0.875rem', sm: '1rem' },
                 width: { xs: '100%', sm: 'auto' },
-                maxWidth: { xs: '280px', sm: 'none' }
+                maxWidth: { xs: '280px', sm: 'none' },
+                borderRadius:'8px'
               }}
             >
               Buy on OpenSea

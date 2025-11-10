@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="page">
+    <div className="page mx-auto max-w-[1440px] overflow-x-hidden" >
       <MuiNavbar />
       <Hero />
       <Features />
