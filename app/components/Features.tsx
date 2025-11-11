@@ -167,7 +167,8 @@ const Features = () => {
                 fontSize: { xs: '0.875rem', sm: '1rem' },
                 width: { xs: '100%', sm: 'auto' },
                 maxWidth: { xs: '280px', sm: 'none' },
-                borderRadius:'8px'
+                borderRadius:'8px',
+                fontFamily:'poppins',
               }}
             >
               Buy on OpenSea

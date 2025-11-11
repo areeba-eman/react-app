@@ -4,10 +4,9 @@ const Collections = () => {
   return (
     <div className="mb-8">
       <Box sx={{
-        maxWidth: "1440px",
-        mx: "auto",
+        
         position: "relative",
-        overflow: "hidden",
+        width:'full'
       }}>
 
          {/* Glow circle behind cards */}

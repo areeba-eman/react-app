@@ -26,7 +26,7 @@ function UserCard({ data, index }: UserCardProps) {
         p: { xs: 1.5, sm: 1.5 },
         gap: { xs: 1, sm: 1.5 },
         position: { xs: 'relative', md: 'absolute' },
-        width: { xs: '100%', sm: '90%', md: 424 },
+        width: { xs: '100%', sm: '100%', md: '80%' },
         maxWidth: { xs: '400px', md: 'none' },
         height: { xs: 'auto', md: 88 },
         minHeight: { xs: 80, md: 88 },
@@ -39,7 +39,7 @@ function UserCard({ data, index }: UserCardProps) {
           md: `${data.top}px`
         },
         mb: { xs: 2, md: 0 },
-        mx: { xs: 'auto', md: 0 },
+        mx: { xs: 'auto', md: 2 },
         background: "#081956",
         borderRadius: 2,
         boxShadow: "0px 8px 30px rgba(0, 0, 0, 0.5)",
@@ -139,9 +139,9 @@ export default function Collections() {
           minHeight: { xs: 'auto', md: '344px' },
           display: "flex",
           flexDirection: { xs: 'column', md: 'row' },
-          // justifyContent: { md: "space-between" },
-          gap: { xs: 4, md: 10 },
-          pl: { xs: 4, md: 9 },
+          gap: { xs: 2, md:1, lg:10 },
+          pl: { xs: 2, md: 1, lg:9 },
+          pr:{xs:2, sm:1}
         }}
       >
         {/* Left Section */}
@@ -152,8 +152,8 @@ export default function Collections() {
           }}
         >
           <Typography 
+            color="primary"
             sx={{ 
-              color: "#5699FF", 
               fontFamily:'poppins',
               fontWeight: 700, 
               fontSize: { xs: 14, sm: 16 }
@@ -190,7 +190,7 @@ export default function Collections() {
             variant="contained"
             sx={{
               mt: { xs: 3, sm: 4 },
-              background: "#1E50FF",
+              background: "primary",
               textTransform: "none",
               fontSize: { xs: 14, sm: 16 },
               fontWeight: 600,
@@ -208,23 +208,23 @@ export default function Collections() {
         <Box 
   sx={{ 
     position: "relative", 
-    width: { xs: '100%', md: '45%', lg: 504 },
+    width: { xs: '100%', md: '50%', lg: 504 },
     height: { xs: 'auto', md: 296 },
     display: 'flex',
-    flexDirection: { xs: 'column', md: 'block' },
+    flexDirection: { xs: 'column' },
     alignItems: { xs: 'center', md: 'flex-start' },
-    paddingLeft: { xs: 0, md: 10, lg: 20 },
+    px: { xs: 0, md: 2 },   
     pt: { xs: 2, md: 2 },
-    pl:8
   }}
 >
   {userCards.map((user, index) => (
     <Box
       key={index}
       sx={{
-        opacity: index === 0 ? 1 : 0.6,  // 👈 decrease opacity for 2nd & 3rd cards
+        opacity: index === 0 ? 1 : 0.7,
         transition: 'opacity 0.3s ease',
-        '&:hover': { opacity: 1 }        // 👈 optional: brighten on hover
+        width: '100%', // ✅ Full width of the parent Box
+        '&:hover': { opacity: 1 }
       }}
     >
       <UserCard data={user} index={index} />
@@ -233,71 +233,8 @@ export default function Collections() {
 </Box>
 
 
-      </Box>
 
-      {/* Discount Banner */}
-      <Box 
-        sx={{
-          width: "100%", 
-          height: { xs: "auto", sm: "70px", md: "90px" },
-          marginTop: { xs: '80px', sm: '120px', md: '150px' }, 
-          display: 'flex', 
-          flexDirection: { xs: 'column', sm: 'row' },
-          justifyContent: { xs: 'center', sm: 'space-between' },
-          alignItems: 'center', 
-          backgroundColor: '#AA00FF', 
-          color: 'white',
-          px: { xs: 2, sm: 3, md: 9 },
-          py: { xs: 2, sm: 0 },
-          gap: { xs: 1, sm: 2 },
-          overflow: 'hidden'
-        }}
-      >
-        <Typography 
-          variant="h4"
-          sx={{
-            fontSize: { xs: '1.25rem', sm: '1.75rem', md: '2.2rem' },
-            fontWeight: 'bold',
-            display: { xs: 'none', sm: 'block' }
-          }}
-        >
-          Discount Sale
-        </Typography>
-        <Typography 
-          variant="h4" 
-          sx={{
-            color: "transparent",
-            WebkitTextStroke: { xs: "0.5px white", md: "0.6px white" },
-            fontWeight: "bold",
-            fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2.125rem' },
-            textAlign: 'center'
-          }}
-        >
-          UPTO 40% OFF
-        </Typography>
-        <Typography 
-          variant="h4"
-          sx={{
-            fontSize: { xs: '1.25rem', sm: '1.75rem', md: '2.2rem' },
-            fontWeight:'bold',
-            display: { xs: 'none', md: 'block' }
-          }}
-        >
-          Discount Sale
-        </Typography>
-        <Typography 
-          variant="h4" 
-          sx={{
-            color: "transparent",
-            WebkitTextStroke: { xs: "0.5px white", md: "0.6px white" },
-            fontWeight: "bold",
-            fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2.125rem' },
-            display: { xs: 'none', lg: 'block' },
-            textAlign: 'center'
-          }}
-        >
-          UPTO 40% OFF
-        </Typography>
+
       </Box>
     </Box>
   );

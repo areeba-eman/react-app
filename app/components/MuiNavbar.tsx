@@ -59,6 +59,7 @@ const MuiNavbar = () => {
         display: 'flex', 
         justifyContent: 'space-between', 
         alignItems: 'center',
+        fontFamily:'poppins',
         p: 2,
         borderBottom: '1px solid rgba(255,255,255,0.1)'
       }}>
@@ -110,9 +111,9 @@ const MuiNavbar = () => {
       <Box sx={{ p: 2, mt: 2 }}>
         <Button 
           variant="contained" 
-          color="primary" 
+          color="primary"
           fullWidth
-          sx={{ py: 1.5 }}
+          sx={{ py: 1.5 , fontFamily:'poppins',}}
         >
           Join Us
         </Button>

@@ -212,11 +212,11 @@ const Hero = () => {
       
           <Box
             sx={{
-              position: { xs: 'relative', sm: 'absolute' },
-              bottom: { xs: 0, sm: "-60px", md: "-80px" },
+              position: { xs:'absolute'},
+              bottom: { xs:'-140px', sm: "-100px", md: "-80px" },
               mt: { xs: 2, sm: 0 },
               mb:{xs: 2, sm: 2 },
-              width: { xs: '90%', sm: '350px', md: '400px' },
+              width: { xs: '90%', sm: '400px', md: '400px' },
               height: { xs: 'auto', sm: '150px', md: '180px' },
               bgcolor: "rgba(255, 255, 255, 0.1)",
               zIndex: { xs: 2, sm: 2 },
@@ -240,7 +240,7 @@ const Hero = () => {
               sx={{ 
                 fontFamily:'poppins',
                 zIndex: 2,
-                width: { xs: '100%', sm: 'auto' },
+                width: { xs: '80%', sm: 'auto' },
                 fontSize: { xs: '0.85rem', sm: '0.875rem' },
                 py: { xs: 1, sm: 0.75 }
               }}
@@ -254,7 +254,7 @@ const Hero = () => {
                 color: "white",
                 borderColor: "white",
                 zIndex: 2,
-                width: { xs: '100%', sm: 'auto' },
+                width: { xs: '80%', sm: 'auto' },
                 fontSize: { xs: '0.85rem', sm: '0.875rem' },
                 py: { xs: 1, sm: 0.75 },
                 fontFamily:'poppins',
@@ -265,7 +265,7 @@ const Hero = () => {
           </Box>
 
           {/* Image */}
-          <img
+          <img 
             src="./images/heroimg.png"
             alt="hero"
             style={{
@@ -280,70 +280,6 @@ const Hero = () => {
         </Box>
       </Stack>
 
-      {/* Discount Banner */}
-      <Box 
-        sx={{
-          width: "100%", 
-          height: { xs: "auto", sm: "70px", md: "90px" },
-          marginTop: { xs: '80px', sm: '120px', md: '150px' }, 
-          display: 'flex', 
-          flexDirection: { xs: 'column', sm: 'row' },
-          justifyContent: { xs: 'center', sm: 'space-between' },
-          alignItems: 'center', 
-          backgroundColor: '#AA00FF', 
-          color: 'white',
-          px: { xs: 2, sm: 3, md: 9 },
-          py: { xs: 2, sm: 0 },
-          gap: { xs: 1, sm: 2 },
-          overflow: 'hidden'
-        }}
-      >
-        <Typography 
-          variant="h4"
-          sx={{
-            fontSize: { xs: '1.25rem', sm: '1.75rem', md: '2.2rem' },
-            fontWeight: 'bold',
-            display: { xs: 'none', sm: 'block' }
-          }}
-        >
-          Discount Sale
-        </Typography>
-        <Typography 
-          variant="h4" 
-          sx={{
-            color: "transparent",
-            WebkitTextStroke: { xs: "0.5px white", md: "0.6px white" },
-            fontWeight: "bold",
-            fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2.125rem' },
-            textAlign: 'center'
-          }}
-        >
-          UPTO 40% OFF
-        </Typography>
-        <Typography 
-          variant="h4"
-          sx={{
-            fontSize: { xs: '1.25rem', sm: '1.75rem', md: '2.2rem' },
-            fontWeight:'bold',
-            display: { xs: 'none', md: 'block' }
-          }}
-        >
-          Discount Sale
-        </Typography>
-        <Typography 
-          variant="h4" 
-          sx={{
-            color: "transparent",
-            WebkitTextStroke: { xs: "0.5px white", md: "0.6px white" },
-            fontWeight: "bold",
-            fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2.125rem' },
-            display: { xs: 'none', lg: 'block' },
-            textAlign: 'center'
-          }}
-        >
-          UPTO 40% OFF
-        </Typography>
-      </Box>
     </Stack>
   );
 };
